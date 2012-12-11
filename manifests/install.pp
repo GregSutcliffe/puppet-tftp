@@ -6,6 +6,9 @@ class tftp::install {
     Debian: {
       $tftp_package = 'tftpd-hpa'
     }
+    Archlinux: {
+      $tftp_package = 'tftp-hpa'
+    }
     default: {
       fail("${::hostname}: This module does not support operatingsystem ${::osfamily}")
     }
